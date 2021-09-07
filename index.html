@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test window open</title>
+  </head>
+
+  <body>
+    <script>
+      function openTab() {
+        var _window = window.open(
+          "https://codepen.io/ansiya/pen/PojbeMR?editors=1011",
+          "_blank"
+        );
+        if (_window) {
+          _window.addEventListener(
+            "load",
+            function () {
+              alert("loaded");
+            },
+            true
+          );
+        }
+      }
+    </script>
+    <button type="button" onclick="openTab()">Open new tab</button>
+  </body>
+</html>
